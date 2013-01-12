@@ -6,10 +6,18 @@
 
 <body>
 <?php 
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	
-	echo "{$username}:{$password}";
+
+setcookie("Password",0,time()+(60*60*24));
+
+
+if(isset($_COOKIE["Password"])){
+	$testpass = $_COOKIE["Password"];
+	echo "Arefin:{$testpass}";
+					}
+	else {
+		echo "No Data in  Cookie";
+		}
+
 ?>
 </body>
 </html>
