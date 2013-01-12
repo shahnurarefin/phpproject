@@ -5,6 +5,17 @@
 </head>
 
 <body>
-<a href="page2.php" target="_blank"></a>
+
+<?php 
+
+$name = $_GET["param1"];
+$fname = $_GET["param2"];
+$mname = $_GET["param3"];
+
+echo "Name: " . $name; echo "<br/>";
+echo "Father's Name: " . $fname; echo "<br/>";
+echo "Mother's Name: " . $mname; echo "<br/>";
+
+?>
 </body>
 </html>

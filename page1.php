@@ -5,6 +5,19 @@
 </head>
 
 <body>
-<a href="page2.php">Go to Page 2</a>
+<?php 
+
+	$url_page = "page2.php";
+	$name = "Shahnur Arefin";
+	$fname = "Mustaq Ahmed";
+	$mname = "Salina Akhtar";
+?>
+<?php 
+	$url = $url_page;
+	$url .= "?param1=" . urlencode($name);
+	$url .= "&param2=" . urlencode($fname);
+	$url .= "&param3=" . urlencode($mname);
+?>
+<a href="<?php echo htmlspecialchars($url);?>">Go to Page 2</a>
 </body>
 </html>
