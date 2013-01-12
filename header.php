@@ -1,7 +1,4 @@
-<?php 
-	header("location: page1.php");
-	exit;
-?>
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,13 +7,13 @@
 </head>
 
 <body>
+
+<?php ob_start();?>
 <?php 
- $_SESSION["last_name"] = "Arefin";
- $_SESSION["first_name"] = "Shahnur";
- 
- echo $_SESSION["first_name"] . " " . $_SESSION["last_name"];
- 
+	header("location: page1.php");
+	exit;
 ?>
+<?php ob_end_flush();?>
 
 </body>
 </html>
