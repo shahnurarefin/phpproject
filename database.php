@@ -29,7 +29,7 @@
 <?php 
 	// database query
 	
-	$result = mysql_query("SELECT * FROM subjects",$connection);
+	$result = mysql_query("SELECT * FROM subjects where id=3",$connection);
 	
 	if(!$result){
 		die("No data found in database" . mysql_error());
@@ -45,3 +45,6 @@
 ?>
 </body>
 </html>
+<?php 
+mysql_close($connection);
+?>
