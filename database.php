@@ -1,6 +1,6 @@
 <?php 
 	//create database connection
-	$connection = mysql_connect("localhost","root","");
+	$connection = mysql_connect("localhost","","");
 	if(!$connection){
 		die("Database is not connected yet: " .  mysql_error());
 	} else {
