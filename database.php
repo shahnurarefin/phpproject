@@ -1,6 +1,6 @@
 <?php 
 	//create database connection
-	$connection = mysql_connect("localhost","","");
+	$connection = mysql_connect("localhost","root","");
 	if(!$connection){
 		die("Database is not connected yet: " .  mysql_error());
 	}
@@ -8,7 +8,7 @@
 	
 	$db_connect = mysql_select_db("widget_corp",$connection);
 	
-	if(!db_connect){
+	if(!$db_connect){
 		die("Database is not connected: " . mysql_error());
 	}
 		
