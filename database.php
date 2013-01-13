@@ -1,4 +1,18 @@
 <?php 
+	// create connection
+	
+	$connection = mysql_connect("localhost","root","");
+	if(!$connection){
+			die("Database connection is not establised" . mysql_error());
+		}
+		
+	// selecting database
+	
+	$db_select = mysql_select_db("widget_corp",$connection);
+	if(!$db_select){
+		die("Database not found" .  mysql_error());
+		}
+		
 
 	
 
@@ -12,11 +26,22 @@
 </head>
 
 <body>
-
 <?php 
+	// database query
+	
+	$result = mysql_query("SELECT * FROM subjects",$connection);
+	
+	if(!$result){
+		die("No data found in database" . mysql_error());
+		}
+		
+	// fetching data
+	
+	while($row = mysql_fetch_array($result)){
+			echo $row["id"] . " " . $row["menu_name"] . " " . $row["position"];	
+			echo "<br/>";
+									}
 
 ?>
-
-
 </body>
 </html>
