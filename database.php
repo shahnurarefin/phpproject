@@ -3,10 +3,14 @@
 	$connection = mysql_connect("localhost","","");
 	if(!$connection){
 		die("Database is not connected yet: " .  mysql_error());
-	} else {
-		echo "Database connected successfully !!";
 	}
-		
+	// connect with database
+	
+	$db_connect = mysql_select_db("widget_corp",$connection);
+	
+	if(!db_connect){
+		die("Database is not connected: " . mysql_error());
+	}
 		
 ?>
 
