@@ -1,4 +1,11 @@
 <?php 
+//  create connection
+
+$connection = mysql_connect("localhost","root","");
+if(!$connection){
+    die("Database connection is not successful: " . mysql_error());
+}
+
 
 		
 
