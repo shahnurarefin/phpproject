@@ -14,6 +14,14 @@ if(!$db_select){
     die("Database is not selected: " . mysql_error());
 }
 
+// performing datbase query
+
+$result = mysql_fetch_array($db_select, $connection);
+
+if(!$result){
+    die("There is no Data in the database" . mysql_error());
+}
+
 
 }
 		
