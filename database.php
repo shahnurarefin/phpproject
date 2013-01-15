@@ -16,14 +16,19 @@ if(!$db_select){
 
 // performing datbase query
 
-$result = mysql_fetch_array($db_select, $connection);
+$result = mysql_query("select id,menu_name from subjects where visible=1", $connection);
 
 if(!$result){
     die("There is no Data in the database" . mysql_error());
 }
 
+// showing data in script
 
+while ($row = mysql_fetch_array($result)){
+    echo $row["menu_name"] . " " . $row["id"];
+    echo "<br/>";
 }
+
 		
 
 	
@@ -41,5 +46,5 @@ if(!$result){
 </body>
 </html>
 <?php 
-
+mysql_close($connection);
 ?>
