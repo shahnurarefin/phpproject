@@ -6,7 +6,16 @@ if(!$connection){
     die("Database connection is not successful: " . mysql_error());
 }
 
+// selecting datbase
 
+$db_select = mysql_select_db("widget_corp",$connection);
+
+if(!$db_select){
+    die("Database is not selected: " . mysql_error());
+}
+
+
+}
 		
 
 	
@@ -21,13 +30,8 @@ if(!$connection){
 </head>
 
 <body>
-<?php 
-
-									}
-
-?>
 </body>
 </html>
 <?php 
-mysql_close($connection);
+
 ?>
